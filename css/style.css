@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    margin: 0;
+}
+.container{
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* BLOCK HEADER */
+.block-header{
+    background-color: #d48989;
+    height: 150px;
+}
+/* END HEADER */
+
+/* PROFILE */
+.title-block{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.profile-title{
+    margin: auto;
+}
+.profile-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}    
+/* END PROFILE */
+
+/* CALENDAR */
+.btn-reset{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.profile-calendar{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+#calendar2 {
+    margin: 0 auto;
+    width: 80%;
+    font: monospace;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+}
+#calendar2 thead tr:last-child {
+    font-size: small;
+    color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+    color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
+}
+#calendar2 tbody td {
+    color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+    color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+    background: rgb(209, 180, 180);
+    color: rgb(44, 86, 122);
+}
+#calendar2 tbody td.day:hover{
+    background: rgb(132, 241, 241);
+    cursor: pointer;
+}
+
+/* END CALENDAR */
+
+/* TIME */
+
+.profile-time{
+    flex-basis: 40%;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+.profile-time-p{
+    display: inline;
+    margin-left: 7px;
+}
+.profile-time-checkbox{
+    margin-left: 20px;
+}
+
+/* END TIME */

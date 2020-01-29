@@ -1,0 +1,65 @@
+let curYear = document.querySelector('.curYear');
+
+const selectCalendar = function(id, year, month) {
+    var Dlast = new Date(year,month+1,0).getDate(),
+        D = new Date(year,month,Dlast),
+        DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+        DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+        calendar = '<tr>',
+        month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+    if (DNfirst != 0) {
+        for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+    }else{
+        for(var  i = 0; i < 6; i++) calendar += '<td>';
+    }
+    for(var  i = 1; i <= Dlast; i++) {
+        if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+            calendar += '<td class="day today">' + i;
+        }else{
+            calendar += '<td class="day">' + i;
+        }
+        if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+            calendar += '<tr>';
+        }
+    }
+    for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+    document.querySelector('#'+id+' tbody').innerHTML = calendar;
+    document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+    document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+    document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+    if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+        document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+    }
+}
+const selectDate = function(event){
+    const target = event.target.innerHTML;
+    if(target > 0 && target < 32){
+        document.querySelectorAll('.day').forEach(function(i){
+            if(i.classList.contains('today')){
+                i.style.background= 'rgb(209, 180, 180)'
+            }else{
+                i.style.background= '#ffffff';
+            }
+        });
+        event.target.style.background = 'red';
+        console.log(target);
+        console.log(curYear.innerHTML); 
+    }
+}
+
+selectCalendar("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+    selectCalendar("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+    selectCalendar("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+}
+// нажатие на числа
+document.querySelector('#calendar2').addEventListener('click', selectDate);
+// сбросить календарь на текущее число
+document.querySelector('.btn-reset').addEventListener('click', function(){
+    selectCalendar("calendar2", new Date().getFullYear(), new Date().getMonth())
+});
+// Оформить код!
