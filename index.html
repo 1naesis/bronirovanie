@@ -21,33 +21,81 @@
 <section class="block-profile">
     <div class="container"> 
         <div class="title-block">
-            <h1 class="profile-title">Заявка на бронирования</h1>
+            <h1 class="profile-title">Заявка на бронирование</h1>
         </div>
         <!-- /.title-block -->
         <div class="profile-content">
-            <div class="profile-calendar">
-                <table id="calendar2">
-                    <thead>
-                        <tr><td>‹<td class="curYear" colspan="5"><td>›
-                        <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-                    <tbody>
-                </table>
-                <button class="btn-reset">Сегодня...</button>
-            </div>
-            <!-- /.calendar -->
-            <div class="profile-time">
-                <form class="form-time" action="#" method="post">
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">10:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">12:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">14:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">15:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">16:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">18:00</br></p></div>
-                    <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">20:00</br></p></div>
+            <div class="profile-services">
+                <form class="form-services" action="#">
+                    <div class="manik">
+                        <h3 class="subtitle">Маникюр</br></h3>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Маникюр с однотонным покрытием гель-лак</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Маникюр (обработка)</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Маникюр с укреплением гелем/акрилом +</br> гель-лак в 1 тон</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Наращивание ногтей</br></p>
+                    </div>
+                    <!-- /.manik -->
+                    <div class="pedik">
+                        <h3 class="subtitle">Педикюр</br></h3>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Обработка стоп и пальчиков с однотонным покрытием гель-лак</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Обработка стоп и пальчиков</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Обработка пальчиков с однотонным покрытием гель-лак</br></p>
+                    </div>
+                    <!-- /.pedik -->
+                    <div class="other">
+                        <h3 class="subtitle">Дополнительные услуги</h3>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Дизайн ногтей</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Снятие гель-лака</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Френч, втирка, аэрография</br></p>
+                        <input type="checkbox" class="service-checkbox" name="profile-service" id=""><p class="service-p">Донаращивание ногтей</br></p>
+                    </div>   <!-- /.other -->
                     
                 </form>
             </div>
-            <!-- /.profile-time -->
+            <!-- /.profile-services -->
+            <div class="profile-masters">
+                <div class="title-block">
+                    <h1 class="profile-title">Выбрать мастера</h1>
+                </div>
+                <form class="form-master" action="#" >
+                    
+                    <input type="radio" name="master" id=""><p class="service-p">Рамиля</p>
+                    <input type="radio" name="master" id=""><p class="service-p">Ольга</p>
+                </form>
+            </div>
+            <!-- /.profile-masters -->
+            <div class="title-block">
+                <h1 class="profile-title">Выбрать время</h1>
+            </div>
+            <div class="time">
+                
+                <div class="profile-calendar">
+                    <table id="calendar2">
+                        <thead>
+                            <tr><td>‹<td class="curYear" colspan="5"><td>›
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                    <button class="btn-reset">Сегодня...</button>
+                </div>
+                <!-- /.profile-calendar -->
+                <div class="profile-time">
+                    <form class="form-time" action="#" method="post">
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">10:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">12:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">14:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">15:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">16:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">18:00</br></p></div>
+                        <div class="time-list"><input class="profile-time-checkbox" type="radio" name="time" id=""><p class="profile-time-p">20:00</br></p></div>                  
+                    </form>
+                </div>
+                <!-- /.profile-time -->
+            </div>
+            <div class="title-block">
+                <Button class="submit">ОТПРАВИТЬ!</Button>
+            </div>
+            
         </div>
         <!-- /.profile-content -->
     </div>

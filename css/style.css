@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-h1{
+h1, p{
     margin: 0;
 }
 .container{
@@ -20,18 +20,39 @@ h1{
 /* PROFILE */
 .title-block{
     display: flex;
-    height: 100px;
-    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
 }
-.profile-title{
-    margin: auto;
-}
-.profile-content{
+.form-services{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}    
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+.form-master{
+    display: flex;
+    justify-content: center;
+}
+.subtitle{
+    margin-top: 20px;
+}
+.manik, .pedik, .other{
+    margin-bottom: 20px;
+    max-width: 50%;
+}
+.service-p, .profile-time-p{
+    display: inline;
+}
+.profile-masters{
+    margin-bottom: 100px;
+}
 /* END PROFILE */
+.time{
+    display: flex;
+    justify-content: space-evenly;
+}
+.submit{
+    margin: 0 auto;
+}
 
 /* CALENDAR */
 .btn-reset{
@@ -42,8 +63,6 @@ h1{
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
-    border: 2px solid #000000;
-    border-radius: 5px;
 }
 #calendar2 {
     margin: 0 auto;
@@ -82,17 +101,6 @@ h1{
 
 /* TIME */
 
-.profile-time{
-    flex-basis: 40%;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-.profile-time-p{
-    display: inline;
-    margin-left: 7px;
-}
-.profile-time-checkbox{
-    margin-left: 20px;
-}
+
 
 /* END TIME */
